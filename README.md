@@ -1,16 +1,33 @@
 # Explorador Cifra Club
 Experimentações com a API do Cifra Clube para explorar as cifras disponíveis em busca de coisas como ciifras fáceis.
 
-# Execução
-```
+## Instalação
+```bash
 composer install
-php musicas-faceis.php [slug_artista] [numero_maximo_acordes]
 ```
 
-# Exemplo
+## CLI: músicas fáceis por artista
+```bash
+php cifra-cli.php buscar-musicas-faceis [slug_artista] [numero_maximo_acordes]
 ```
-php musicas-faceis.php padre-marcelo-rossi 5
+
+### Exemplo
+```bash
+php cifra-cli.php buscar-musicas-faceis padre-marcelo-rossi 5
 ```
+
+## Interface de busca (web)
+Inicie um servidor local do PHP na raiz do projeto:
+
+```bash
+php -S 127.0.0.1:8000
+```
+
+Depois, abra no navegador:
+
+- http://127.0.0.1:8000/busca.php
+
+Na página você informa o slug do artista e o número máximo de acordes para listar as músicas mais simples.
 
 # Sobre Decisões Técnicas
 
@@ -24,6 +41,3 @@ Para evitar nomear um grupo de classes sobre um conceito, resolvi manter mais si
 O domínio da língua inglesa, por mais que seja desejável para um programador não é realidade no Brasil
 e este código tem a intenção de apoiar um número maior de pessoas no desenvolvimento de software guiado a testes.
 Optei por manter em inglês unicamente nomes de Padrões de Projeto (Design Patterns) altamente consolidados como "Factory" e "Proxy".
-
-
-
